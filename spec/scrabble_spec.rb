@@ -41,4 +41,8 @@ describe 'scrabble score' do
     scrabble = Scrabble.new('BafAe')
     expect(scrabble.score).to eq 10
   end
+  it 'when empty string ' do
+    scrabble = Scrabble.new('')
+    expect(scrabble.score).to eq 0
+  end
 end

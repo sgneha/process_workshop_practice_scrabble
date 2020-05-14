@@ -11,6 +11,7 @@ class Scrabble
   end
 
   def score
+    return 0 if (@str =~ /[a-z]/i).nil?
     letter_array = @str.split('')
 
     letter_array.each do |letter|
