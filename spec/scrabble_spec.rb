@@ -49,4 +49,8 @@ describe 'scrabble score' do
     scrabble = Scrabble.new(nil)
     expect(scrabble.score).to eq 0
   end
+  it 'when tab or line break ' do
+    scrabble = Scrabble.new(' ')
+    expect(scrabble.score).to eq 0
+  end
 end
