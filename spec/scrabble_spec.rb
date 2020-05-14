@@ -12,4 +12,8 @@ describe 'scrabble score' do
     scrabble = Scrabble.new('D')
     expect(scrabble.score).to eq 2
   end
+  it 'when double letter D' do
+    scrabble = Scrabble.new('AB')
+    expect(scrabble.score).to eq 4
+  end
 end

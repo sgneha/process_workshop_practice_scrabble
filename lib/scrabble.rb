@@ -1,5 +1,6 @@
 class Scrabble
   def initialize(str)
+    @t_score = 0
     @score_table = { 'A' => 1,
                      'B' => 3,
                      'C' => 3,
@@ -10,6 +11,11 @@ class Scrabble
   end
 
   def score
-    @score_table[@str]
+    letter_array = @str.split('')
+
+    letter_array.each do |letter|
+      @t_score += @score_table[letter]
+    end
+    @t_score
   end
 end
