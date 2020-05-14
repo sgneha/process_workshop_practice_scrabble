@@ -10,12 +10,6 @@ class Scrabble
   end
 
   def score
-    if @str == 'A'
-      @score_table['A']
-    elsif @str == 'B'
-      @score_table['B']
-    else
-      @score_table['D']
-    end
+    @score_table[@str]
   end
 end
