@@ -24,4 +24,12 @@ describe 'scrabble score' do
     scrabble = Scrabble.new('a')
     expect(scrabble.score).to eq 1
   end
+  it 'when double letter string in downcase' do
+    scrabble = Scrabble.new('af')
+    expect(scrabble.score).to eq 5
+  end
+  it 'when multiple letter string in downcase' do
+    scrabble = Scrabble.new('afe')
+    expect(scrabble.score).to eq 6
+  end
 end
