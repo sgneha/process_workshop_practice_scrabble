@@ -20,4 +20,8 @@ describe 'scrabble score' do
     scrabble = Scrabble.new('CDBAFE')
     expect(scrabble.score).to eq 14
   end
+  it 'when single letter string in downcase' do
+    scrabble = Scrabble.new('a')
+    expect(scrabble.score).to eq 1
+  end
 end

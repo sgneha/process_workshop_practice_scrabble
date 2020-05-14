@@ -14,7 +14,7 @@ class Scrabble
     letter_array = @str.split('')
 
     letter_array.each do |letter|
-      @t_score += @score_table[letter]
+      @t_score += @score_table[letter.upcase]
     end
     @t_score
   end
