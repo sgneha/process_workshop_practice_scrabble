@@ -32,4 +32,8 @@ describe 'scrabble score' do
     scrabble = Scrabble.new('afe')
     expect(scrabble.score).to eq 6
   end
+  it 'when multiple letter string in upcase & downcase' do
+    scrabble = Scrabble.new('BafAe')
+    expect(scrabble.score).to eq 10
+  end
 end
