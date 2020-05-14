@@ -16,4 +16,8 @@ describe 'scrabble score' do
     scrabble = Scrabble.new('AB')
     expect(scrabble.score).to eq 4
   end
+  it 'when multiple letter string' do
+    scrabble = Scrabble.new('CDBAFE')
+    expect(scrabble.score).to eq 14
+  end
 end
