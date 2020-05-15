@@ -1,5 +1,6 @@
 class Scrabble
-  attr_reader :str
+  attr_reader :str, :score_table, :t_score
+
   def initialize(str)
     @t_score = 0
     @score_table = { 'A' => 1,
@@ -16,8 +17,8 @@ class Scrabble
     letter_array = str.split('')
 
     letter_array.each do |letter|
-      @t_score += @score_table[letter.upcase]
+      @t_score = score_table[letter.upcase] + t_score
     end
-    @t_score
+    t_score
   end
 end
